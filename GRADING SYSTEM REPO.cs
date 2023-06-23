@@ -61,24 +61,7 @@ namespace IntroToCSharp
                             case "5":
                                 while (loop3)
                                 {
-                                    Console.WriteLine("Choose your grade in this subject or type \"exit\" to stop the program");
-                                    Console.WriteLine();
-
-                                    Console.WriteLine("1. 97 - 100");
-                                    Console.WriteLine("2. 94 - 96");
-                                    Console.WriteLine("3. 91 - 93");
-                                    Console.WriteLine("4. 88 - 90");
-                                    Console.WriteLine("5. 85 - 87");
-                                    Console.WriteLine("6. 82 - 84");
-                                    Console.WriteLine("7. 79 - 81");
-                                    Console.WriteLine("8. 76 - 78");
-                                    Console.WriteLine("9. 75");
-                                    Console.WriteLine("10. 65 - 74");
-                                    Console.WriteLine("11. Inc");
-                                    Console.WriteLine("12. W");
-                                    Console.WriteLine("13. D");
-
-                                    gradeChoice = Console.ReadLine();
+                                    gradeChoice = chooseGrade();
                                     switch (gradeChoice)
                                     {
                                         case "exit":
@@ -168,9 +151,30 @@ namespace IntroToCSharp
             subjectsLists.Add("5. Engineering Data Analysis");
             
             foreach (string ListSubjects in subjectsLists)
-        {
-            Console.WriteLine(ListSubjects);
+            {
+                Console.WriteLine(ListSubjects);
+            }
         }
-        }
+        static string chooseGrade()
+            {
+                Console.WriteLine("Choose your grade in this subject or type \"exit\" to stop the program");
+                Console.WriteLine();
+
+                Console.WriteLine("1. 97 - 100");
+                Console.WriteLine("2. 94 - 96");
+                Console.WriteLine("3. 91 - 93");
+                Console.WriteLine("4. 88 - 90");
+                Console.WriteLine("5. 85 - 87");
+                Console.WriteLine("6. 82 - 84");
+                Console.WriteLine("7. 79 - 81");
+                Console.WriteLine("8. 76 - 78");
+                Console.WriteLine("9. 75");
+                Console.WriteLine("10. 65 - 74");
+                Console.WriteLine("11. Inc");
+                Console.WriteLine("12. W");
+                Console.WriteLine("13. D");
+
+                return Console.ReadLine();
+            }
     }
 }
